@@ -1,16 +1,14 @@
 [包]
 格式 = 1
 名 = "yanxu-webblog"
-版 = "0.1.0"
+版 = "0.2.0"
 入口 = "src/主.yx"
-说明 = "综合验证言序 HTML、HTTP 与 Web 基础库的最小博客"
+说明 = "使用言枢与言标构建的完整博客参考项目"
 许可 = "MIT"
 作者 = ["言序团队"]
 
 [依赖]
-yanxu-html = { git = "https://github.com/yanxulang/yanxu-html.git", 修订 = "main", 版 = "^0.1" }
-yanxu-http = { git = "https://github.com/yanxulang/yanxu-http.git", 修订 = "main", 版 = "^0.1" }
-yanxu-web = { git = "https://github.com/yanxulang/yanxu-web.git", 修订 = "main", 版 = "^0.1" }
+yanxu-web = { git = "https://github.com/yanxulang/yanxu-web.git", 修订 = "main", 版 = "^0.2" }
 言据 = { git = "https://github.com/yanxulang/yanju.git", 修订 = "main", 版 = "^1" }
 
 [权限]
