@@ -1,39 +1,35 @@
-# yanxu-webblog 运行与部署边界
+# 言枢博客运行与部署
 
 ## 本地运行
 
-默认监听`127.0.0.1:8787`，只暴露在本机回环接口。修改端口时使用`YANXU_WEBBLOG_ADDR`：
+```sh
+yanbao --manifest-path yanxu-webblog install
+yanbao --manifest-path yanxu-webblog run
+```
+
+默认监听`127.0.0.1:8787`。可在清单允许范围内设置：
 
 ```sh
 YANXU_WEBBLOG_ADDR=127.0.0.1:9000 yanbao --manifest-path yanxu-webblog run
 ```
 
-地址必须符合`言序.toml`中的`TCP监听`权限。不要为方便开发把权限扩展为不必要的外部接口。
-
 ## 检查与测试
 
-从总工作区根目录运行：
-
 ```sh
-YANXU_BIN=yanxu-language-new/target/debug/yanxu yanbao/target/debug/yanbao --manifest-path yanxu-webblog install
-yanxu-language-new/target/debug/yanxu 查 yanxu-webblog/src/主.yx
-yanxu-language-new/target/debug/yanxu 试 yanxu-webblog/tests --json
+yanxu 查 yanxu-webblog/src/主.yx
+yanxu 试 yanxu-webblog/tests --并发 1 --json
 ```
 
-`--once`适合真实连接冒烟测试：先在后台启动一次性服务器，再发出一个请求。集成规格测试本身不需要端口。
+并发设为 1 是为了避免多个测试进程同时检出共享 Git 包缓存；应用行为本身由无端口客户端快速验证。真实连接可用`yanbao --manifest-path yanxu-webblog run -- --once`进行一次请求冒烟测试。
 
-## 为什么不是生产服务器
+## 生产边界
 
-当前开发服务器是串行 HTTP/1.1，一条连接只处理一个请求，然后发送`Connection: close`。项目没有 TLS、并发工作池、长连接、流式请求、速率限制、可信代理配置、结构化访问日志、指标、优雅重启或会话存储。
+当前开发服务器串行处理 HTTP/1.1，每连接只读取一个请求并发送`Connection: close`。它没有 TLS、并发工作池、长连接、流式请求、可信代理、速率限制、结构化日志、指标、优雅关闭或会话存储。
 
-安全首部中间件和目录穿越防护是应用设计示例，不是生产认证。把服务直接绑定公网会扩大拒绝服务、慢请求和运维风险。
+默认 CSP、`nosniff`、同源 referrer policy、模板自动转义和目录穿越防护只是应用安全基线。身份、授权、CSRF、输入校验、密码与密钥、备份和运维仍由生产系统负责。
 
-## 若要进行受控演示
+受控演示至少应绑定回环地址，由成熟反向代理终止 HTTPS、施加超时与请求大小限制、清理转发首部，并将进程放入受限账户或容器。
 
-临时演示至少应保持应用绑定回环地址，由成熟反向代理终止 HTTPS、限制请求大小与超时，并把进程置于受限账户或容器中。代理应覆盖或清理不受信任的转发首部，并配置访问日志与健康检查。
+## 静态与模板文件
 
-这仍然不改变后端串行处理的容量上限。真正的生产支持需要等待`yanxu-http`和`yanxu-web`完成并发、连接生命周期、背压、优雅关闭与代理信任模型。最新范围以[言序 Web 路线图](https://docs.yanxu.dev/web/security-roadmap/)为准。
-
-## 静态资产
-
-示例由应用进程读取`static/`并设置`no-cache`，便于开发时立即看到变化。稳定部署应为带内容摘要的资产设置长期缓存，并优先交由反向代理、CDN 或对象存储提供。
+模板在每次请求时从`templates/`读取，静态文件默认`Cache-Control: no-cache`，都以开发反馈速度为目标。生产部署应预编译或缓存模板，并让带内容摘要的静态资产由代理、CDN 或对象存储提供。

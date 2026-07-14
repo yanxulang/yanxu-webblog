@@ -1,0 +1,14 @@
+{% 承 base.yb.html %}
+{% 块 主体 %}  <section class="hero">
+    <p class="eyebrow">YANSHU · YANBIAO</p>
+    <h1>让中文 Web 项目从路由到模板保持清晰</h1>
+    <p class="lede">一个展示言枢配置、命名路由、言标模板、JSON、言据与静态文件的完整参考项目。</p>
+  </section>
+  <section class="post-grid">
+{% 逐 文章 于 文章列 %}    <article class="post-card">
+      <p class="eyebrow">{{ 文章.date }}</p>
+      <h2><a href="{{ 文章.url }}">{{ 文章.title }}</a></h2>
+      <p>{{ 文章.summary }}</p>
+    </article>
+{% 终逐 %}  </section>
+{% 终块 %}

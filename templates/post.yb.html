@@ -1,0 +1,9 @@
+{% 承 base.yb.html %}
+{% 块 主体 %}  <article class="post-page">
+    <p class="eyebrow">{{ 文章.date }}</p>
+    <h1>{{ 文章.title }}</h1>
+    <p class="lede">{{ 文章.summary }}</p>
+    <p>{{ 文章.body }}</p>
+    <a class="back-link" href="{{ 首页地址 }}">← 返回首页</a>
+  </article>
+{% 终块 %}
