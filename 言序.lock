@@ -19,7 +19,7 @@ entry = "src/言序HTTP.yx"
 name = "yanxu-web"
 version = "0.1.0"
 source = "path:deps/yanxu-web"
-checksum = "37df955babf0abf35d666b84f28aa4846281df45a847bb3645c212ec1d165bc4"
+checksum = "c8aa3259b9f8b2b5551ede6e57076184dc622a8f962cc83909c574c471d81296"
 entry = "src/言序Web.yx"
 
 [[package]]
