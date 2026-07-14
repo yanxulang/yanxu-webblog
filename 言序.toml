@@ -1,0 +1,22 @@
+[包]
+格式 = 1
+名 = "yanxu-webblog"
+版 = "0.1.0"
+入口 = "src/主.yx"
+说明 = "综合验证言序 HTML、HTTP 与 Web 基础库的最小博客"
+许可 = "MIT"
+作者 = ["言序团队"]
+
+[依赖]
+yanxu-html = { 路径 = "deps/yanxu-web/deps/yanxu-html", 版 = "^0.1" }
+yanxu-http = { 路径 = "deps/yanxu-web/deps/yanxu-http", 版 = "^0.1" }
+yanxu-web = { 路径 = "deps/yanxu-web", 版 = "^0.1" }
+言据 = { 路径 = "deps/yanju", 版 = "^1" }
+
+[权限]
+文件 = ["."]
+网络 = []
+TCP监听 = ["127.0.0.1", "::1", "localhost"]
+UDP绑定 = []
+环境 = ["YANXU_WEBBLOG_ADDR"]
+进程 = false

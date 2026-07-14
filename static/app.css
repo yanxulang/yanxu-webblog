@@ -1,0 +1,27 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Serif SC", "Songti SC", serif;
+  background: #f4efe6;
+  color: #261f1a;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+a { color: #9f3528; text-underline-offset: 0.2em; }
+.shell, .site-header, .site-footer { width: min(68rem, calc(100% - 2rem)); margin-inline: auto; }
+.site-header { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; border-bottom: 1px solid #d8cdbd; }
+.site-header nav { display: flex; gap: 1rem; }
+.brand { color: inherit; font-size: 1.25rem; font-weight: 700; text-decoration: none; }
+.hero { padding: 5rem 0 3rem; max-width: 52rem; }
+.hero h1, .post-page h1 { margin: 0.25rem 0 1rem; font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 1.04; letter-spacing: -0.04em; }
+.eyebrow { color: #9f3528; font-family: ui-monospace, monospace; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.lede { font-size: 1.25rem; line-height: 1.8; color: #5a4a3e; }
+.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1rem; padding-bottom: 4rem; }
+.post-card { padding: 1.5rem; border: 1px solid #d8cdbd; border-radius: 0.4rem; background: #fbf8f2; box-shadow: 0 0.5rem 2rem rgb(65 42 28 / 6%); }
+.post-card h2 { margin: 0.35rem 0 0.75rem; line-height: 1.25; }
+.post-card h2 a { color: inherit; }
+.post-page { max-width: 48rem; padding: 5rem 0; }
+.post-page > p:not(.eyebrow, .lede) { font-size: 1.1rem; line-height: 2; }
+.back-link { display: inline-block; margin-top: 2rem; }
+.site-footer { padding: 2rem 0 3rem; border-top: 1px solid #d8cdbd; color: #746257; font-size: 0.9rem; }
+@media (max-width: 40rem) { .site-header { align-items: flex-start; } .hero { padding-top: 3rem; } }

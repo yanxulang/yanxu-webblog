@@ -1,0 +1,30 @@
+lock_version = 1
+manifest_checksum = "d4021603d6541e19410a304635a19dc6d27efe6d402cf77137a88228f9bf0741"
+
+[[package]]
+name = "yanxu-html"
+version = "0.1.0"
+source = "path:deps/yanxu-web/deps/yanxu-html"
+checksum = "fcc9b9fe120cbf35bcc63180b55e079567e18c90c274bb7f7b8494c5346c74ff"
+entry = "src/言序HTML.yx"
+
+[[package]]
+name = "yanxu-http"
+version = "0.1.0"
+source = "path:deps/yanxu-web/deps/yanxu-http"
+checksum = "95a746d382f013b5fac1c1af9f3de5fe473c4e302363ef827e2807cd57bc411a"
+entry = "src/言序HTTP.yx"
+
+[[package]]
+name = "yanxu-web"
+version = "0.1.0"
+source = "path:deps/yanxu-web"
+checksum = "37df955babf0abf35d666b84f28aa4846281df45a847bb3645c212ec1d165bc4"
+entry = "src/言序Web.yx"
+
+[[package]]
+name = "言据"
+version = "1.1.0"
+source = "path:deps/yanju"
+checksum = "15d4418da262dc9d6427425718fdefaeef7008b60e01fe26f9e2ac4451392aa7"
+entry = "src/言据.yx"
