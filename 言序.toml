@@ -8,10 +8,10 @@
 作者 = ["言序团队"]
 
 [依赖]
-yanxu-html = { 路径 = "deps/yanxu-web/deps/yanxu-html", 版 = "^0.1" }
-yanxu-http = { 路径 = "deps/yanxu-web/deps/yanxu-http", 版 = "^0.1" }
-yanxu-web = { 路径 = "deps/yanxu-web", 版 = "^0.1" }
-言据 = { 路径 = "deps/yanju", 版 = "^1" }
+yanxu-html = { git = "https://github.com/yanxulang/yanxu-html.git", 修订 = "main", 版 = "^0.1" }
+yanxu-http = { git = "https://github.com/yanxulang/yanxu-http.git", 修订 = "main", 版 = "^0.1" }
+yanxu-web = { git = "https://github.com/yanxulang/yanxu-web.git", 修订 = "main", 版 = "^0.1" }
+言据 = { git = "https://github.com/yanxulang/yanju.git", 修订 = "main", 版 = "^1" }
 
 [权限]
 文件 = ["."]

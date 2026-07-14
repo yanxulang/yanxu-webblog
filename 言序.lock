@@ -1,30 +1,34 @@
 lock_version = 1
-manifest_checksum = "d4021603d6541e19410a304635a19dc6d27efe6d402cf77137a88228f9bf0741"
+manifest_checksum = "5136915c0f299ffa8f1686427d1a809809932a1990a91ac331926e0ba4d85f85"
 
 [[package]]
 name = "yanxu-html"
 version = "0.1.0"
-source = "path:deps/yanxu-web/deps/yanxu-html"
-checksum = "fcc9b9fe120cbf35bcc63180b55e079567e18c90c274bb7f7b8494c5346c74ff"
+source = "git:https://github.com/yanxulang/yanxu-html.git"
+revision = "e55ccb3284f8382b133a29c4a505d2aa3835a828"
+checksum = "95b4ed9d20167acff64d0738f48370ad630315d673e8a5314e9be3323addc150"
 entry = "src/言序HTML.yx"
 
 [[package]]
 name = "yanxu-http"
 version = "0.1.0"
-source = "path:deps/yanxu-web/deps/yanxu-http"
-checksum = "95a746d382f013b5fac1c1af9f3de5fe473c4e302363ef827e2807cd57bc411a"
+source = "git:https://github.com/yanxulang/yanxu-http.git"
+revision = "aa0ca6a8443833cf3317be8a1708bff31c6e91d0"
+checksum = "78cafbc41bc7fb6302073a27ae6ca0318229da702009dff77b375383a11be122"
 entry = "src/言序HTTP.yx"
 
 [[package]]
 name = "yanxu-web"
 version = "0.1.0"
-source = "path:deps/yanxu-web"
-checksum = "c8aa3259b9f8b2b5551ede6e57076184dc622a8f962cc83909c574c471d81296"
+source = "git:https://github.com/yanxulang/yanxu-web.git"
+revision = "58c8080fc662609728c177e46802b31ac60cd32c"
+checksum = "e9509c204e1c80207298d409cb3a627e61ba6b488fa4192d2b1799d7634906ca"
 entry = "src/言序Web.yx"
 
 [[package]]
 name = "言据"
 version = "1.1.0"
-source = "path:deps/yanju"
+source = "git:https://github.com/yanxulang/yanju.git"
+revision = "64276f1bc4d0e0f3f9e5423f907053a532ae1750"
 checksum = "15d4418da262dc9d6427425718fdefaeef7008b60e01fe26f9e2ac4451392aa7"
 entry = "src/言据.yx"

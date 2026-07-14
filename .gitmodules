@@ -1,6 +1,0 @@
-[submodule "deps/yanxu-web"]
-	path = deps/yanxu-web
-	url = https://github.com/yanxulang/yanxu-web.git
-[submodule "deps/yanju"]
-	path = deps/yanju
-	url = https://github.com/yanxulang/yanju.git
