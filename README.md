@@ -9,8 +9,8 @@
 
 ```sh
 git clone https://github.com/yanxulang/yanxu-webblog.git
-yanbao --manifest-path yanxu-webblog install
-yanbao --manifest-path yanxu-webblog run
+yanbao install --manifest-path yanxu-webblog
+yanbao run --manifest-path yanxu-webblog
 ```
 
 项目通过 Git `main + ^0.2`使用已发布的言枢 0.2，`言序.lock`固定经过验证的精确修订；普通克隆后即可由言包复现依赖。
@@ -18,13 +18,13 @@ yanbao --manifest-path yanxu-webblog run
 默认地址为[http://127.0.0.1:8787](http://127.0.0.1:8787)。可用清单允许的环境变量调整地址：
 
 ```sh
-YANXU_WEBBLOG_ADDR=127.0.0.1:9000 yanbao --manifest-path yanxu-webblog run
+YANXU_WEBBLOG_ADDR=127.0.0.1:9000 yanbao run --manifest-path yanxu-webblog
 ```
 
 自动化真实连接可使用一次请求模式：
 
 ```sh
-yanbao --manifest-path yanxu-webblog run -- --once
+yanbao run --manifest-path yanxu-webblog -- --once
 ```
 
 ## 项目结构
@@ -80,7 +80,7 @@ tests/集成.yx
 从言序总工作区根目录运行：
 
 ```sh
-YANXU_BIN=yanxu-language-new/target/debug/yanxu yanbao/target/debug/yanbao --manifest-path yanxu-webblog install
+YANXU_BIN=yanxu-language-new/target/debug/yanxu yanbao/yanbao install --manifest-path yanxu-webblog
 yanxu-language-new/target/debug/yanxu 查 yanxu-webblog/src/主.yx
 yanxu-language-new/target/debug/yanxu 试 yanxu-webblog/tests --并发 1 --json
 ```
@@ -91,4 +91,4 @@ yanxu-language-new/target/debug/yanxu 试 yanxu-webblog/tests --并发 1 --json
 
 言枢开发服务器仍为串行 HTTP/1.1、一连接一请求模型。默认安全首部和静态路径防护不是生产认证；TLS、并发、速率限制、认证授权、CSRF、日志、指标和优雅关闭仍需独立实现或由成熟前置系统承担。
 
-详细说明见[教程](docs/tutorial.md)、[项目结构](docs/project-structure.md)和[运行与部署](docs/running-and-deployment.md)。当前版本为`0.2.0`。
+详细说明见[教程](docs/tutorial.md)、[项目结构](docs/project-structure.md)和[运行与部署](docs/running-and-deployment.md)。当前版本为`0.2.1`；清单格式 2 将`templates`与`static`声明为 YXB 资源。

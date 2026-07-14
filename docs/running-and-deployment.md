@@ -3,14 +3,14 @@
 ## 本地运行
 
 ```sh
-yanbao --manifest-path yanxu-webblog install
-yanbao --manifest-path yanxu-webblog run
+yanbao install --manifest-path yanxu-webblog
+yanbao run --manifest-path yanxu-webblog
 ```
 
 默认监听`127.0.0.1:8787`。可在清单允许范围内设置：
 
 ```sh
-YANXU_WEBBLOG_ADDR=127.0.0.1:9000 yanbao --manifest-path yanxu-webblog run
+YANXU_WEBBLOG_ADDR=127.0.0.1:9000 yanbao run --manifest-path yanxu-webblog
 ```
 
 ## 检查与测试
@@ -20,7 +20,7 @@ yanxu 查 yanxu-webblog/src/主.yx
 yanxu 试 yanxu-webblog/tests --并发 1 --json
 ```
 
-并发设为 1 是为了避免多个测试进程同时检出共享 Git 包缓存；应用行为本身由无端口客户端快速验证。真实连接可用`yanbao --manifest-path yanxu-webblog run -- --once`进行一次请求冒烟测试。
+并发设为 1 是为了避免多个测试进程同时检出共享 Git 包缓存；应用行为本身由无端口客户端快速验证。真实连接可用`yanbao run --manifest-path yanxu-webblog -- --once`进行一次请求冒烟测试。
 
 ## 生产边界
 
