@@ -1,11 +1,11 @@
 lock_version = 2
-manifest_checksum = "a16a2aef2114afc47a9ce625c61d1dc03ebbbb90d733a4c2da251be50644aedc"
+manifest_checksum = "7453004594abc8a541b4773d087aa8db3e9c054fff455841837b52c4ceccfd89"
 target = "aarch64-apple-darwin"
 generator = "1.1.6"
 
 [root_dependencies]
 yanxu-web = "yanxu-web@0.2.1#30be1b212f39-20d760d93851f546"
-"言据" = "言据@1.1.1#9f376cc5bbdb-535a2284cdbbde0c"
+"言据" = "言据@1.1.2#9f376cc5bbdb-224c315783494338"
 
 [root_dev_dependencies]
 
@@ -14,7 +14,7 @@ id = "yanxu-html@0.1.1#99332c12d990-e7ea8cdb947fd83e"
 name = "yanxu-html"
 version = "0.1.1"
 source = "git:https://github.com/yanxulang/yanxu-html.git"
-revision = "9c015a2173b2ecae79b9acd2711cac57b5367462"
+revision = "83a505d543760914d08a204d5ec9248b47a0e042"
 checksum = "e7ea8cdb947fd83e907ebd6c9ba21917deab3a029537226f8deeb852a9b7c2f9"
 entry = "src/言序HTML.yx"
 target = "aarch64-apple-darwin"
@@ -30,7 +30,7 @@ id = "yanxu-http@0.1.1#17696d671b00-bc61685c0ab03271"
 name = "yanxu-http"
 version = "0.1.1"
 source = "git:https://github.com/yanxulang/yanxu-http.git"
-revision = "5eae560e168b7402014f664bf70d7527581284b7"
+revision = "290f634fcc94dd036a4f2644a87bd5b428689a1d"
 checksum = "bc61685c0ab032718ee7d924fe39d55d7c8ee58498be6110934667d3a5e2b4b1"
 entry = "src/言序HTTP.yx"
 target = "aarch64-apple-darwin"
@@ -46,7 +46,7 @@ id = "yanxu-web@0.2.1#30be1b212f39-20d760d93851f546"
 name = "yanxu-web"
 version = "0.2.1"
 source = "git:https://github.com/yanxulang/yanxu-web.git"
-revision = "bcbe44428c27e9e9b7f6d8849697518d4f14970b"
+revision = "c395d76be2ce54323f434bac19cc12828ea2a60c"
 checksum = "20d760d93851f546811ab5f3eb805e14ae28fa601187522f0d701c698463ffa2"
 entry = "src/言序Web.yx"
 target = "aarch64-apple-darwin"
@@ -61,15 +61,15 @@ yanxu-http = "yanxu-http@0.1.1#17696d671b00-bc61685c0ab03271"
 "默认" = "src/言序Web.yx"
 
 [[package]]
-id = "言据@1.1.1#9f376cc5bbdb-535a2284cdbbde0c"
+id = "言据@1.1.2#9f376cc5bbdb-224c315783494338"
 name = "言据"
-version = "1.1.1"
+version = "1.1.2"
 source = "git:https://github.com/yanxulang/yanju.git"
-revision = "56db19bcfbdfad323a2fecaed7d2aed420203279"
-checksum = "535a2284cdbbde0c81d61756e44cfdb2be7a0cc7c44094f769c01ba2b0c07f94"
+revision = "cd32c4a77fbf636d5aba3578a81ce27508539545"
+checksum = "224c31578349433870be11aa599edd1072b9651e0d659819f4ab9a971064a5c0"
 entry = "src/言据.yx"
 target = "aarch64-apple-darwin"
-minimum_yanxu = ">=1.1.5"
+minimum_yanxu = ">=1.1.6"
 
 [package.dependencies]
 
