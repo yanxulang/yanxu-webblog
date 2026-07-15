@@ -1,7 +1,7 @@
 lock_version = 2
 manifest_checksum = "a16a2aef2114afc47a9ce625c61d1dc03ebbbb90d733a4c2da251be50644aedc"
 target = "aarch64-apple-darwin"
-generator = "1.1.5"
+generator = "1.1.6"
 
 [root_dependencies]
 yanxu-web = "yanxu-web@0.2.1#30be1b212f39-20d760d93851f546"
